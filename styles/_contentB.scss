@@ -1,0 +1,349 @@
+
+// Blog
+
+.blog {
+	color: $l-gray;
+	background-color: $black;
+}
+
+.blogBox {
+	display: flex;
+	align-items: flex-start;
+	margin: 40px 0;
+
+	.blogBoxIcons {
+		display: flex;
+		align-items: flex-start;
+		margin: 0 30px;
+		width: 50%;
+
+		& > img {
+			margin: 0 30px;
+			width: 75%;
+		}
+	}
+
+}
+
+.blogIcon {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 25%;
+}
+
+.blogIcon div:first-child {
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	background-color: $d-gray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+		img {
+			width: 33.33%;
+		}
+			
+}
+
+
+.blogIcon > img {
+	max-width: 50px;
+	position: relative;
+	top: -10px;
+}
+
+.blogBoxInfo {
+	width: 50%;
+		
+	h4 {
+		font-weight: normal;
+	}
+
+	p {
+		padding: 0;
+	}
+		
+	span {
+		color: $gray;
+		border-right: 2px solid $gray;
+		padding: 0 15px;
+
+		&:first-child {
+			padding-left: 0
+		}
+
+		&:last-child {
+			border-right: none;
+		}
+	
+
+		p {
+			margin-bottom: 50px;
+		}
+	
+		a {
+			color: $black;
+			background-color: $bronze;
+			border: 2px solid $black;
+			margin-left: 0;
+
+			&:hover {
+				color: $bronze;
+				background-color: $black;
+				border: 2px solid $bronze;
+			}
+		}
+	}
+
+}
+
+// Pricing Plans 
+
+.pricePlans {
+	display: flex;
+	justify-content: space-between;
+}
+
+.plan {
+	border: 1px solid $gray;
+	text-align: center;
+	width: 32%;
+	font-family: $droidItalic;
+	font-style: italic;
+	transition: all .3s;
+
+	& li:first-child {
+		border: 1px solid $gray;
+		background: white;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		top: -30px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		div {
+			border-radius: 50%;
+			background-color: $black;
+			width: 80%;
+			height: 80%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			}
+	}
+
+	& li:nth-child(2) {
+			border-bottom: 1px solid $gray;
+			font-size: 50px;
+			font-family: $headline;
+			font-style: normal;
+			padding-bottom: 45px;
+			margin-bottom: 30px;
+			padding-right: 22px;
+
+		span {
+			font-size: 20px;
+			position: relative;
+			top: -20px;
+			right: -10px;
+		}
+	}
+
+	a {
+		color: white;
+		background: $black;
+	}
+	
+	&:hover {
+		background: $bronze;
+		transform: scale(1.15);
+		border-color: $bronze;
+	
+	& li:first-child {
+		border-color: $bronze;
+		
+		div {
+			background: $bronze;
+		}
+	} //this is the top icon
+
+	& li:nth-child(2), & li:nth-child(1n+3) {
+		color: white;
+		border-bottom: $bronze;
+	} //backround for list
+	
+	& li:nth-child(3) {
+		background: white;
+		color: $black;
+	} //plan title
+
+	& li:nth-child(9) a {
+		background: white;
+		color: $black;
+		border: 2px solid $bronze;
+	} // last item with anchor button
+
+	} // &:hover
+
+
+} // plan 
+
+.plan li:nth-child(1n+3) {
+	padding: 20px 0;
+	color: $d-gray;
+
+}
+
+.plan li:nth-child(3) {
+	background: $black;
+	width: 50%;
+    margin: 0 auto;
+    position: relative;
+    top: -60px;
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+    font-family: $headline;
+    font-style: normal;
+	text-transform: uppercase;
+}
+
+.plan li:nth-child(4) {
+	padding-top: 0;
+}
+
+.plan li:nth-child(9) {
+	padding: 40px 0 60px 0;
+	font-family: $headline;
+	font-style: normal;
+}
+
+// Hover state for Plan Box
+
+// Clients
+
+.clientSay {
+	background-color: $black;
+	align-items: center;
+	color: $l-gray;
+	text-align: center;
+	padding-bottom: 0;
+
+	h4, h5 {
+		display: inline-block;
+		padding: 0 10px;
+	}
+
+	.intro {
+		margin-bottom: 0;
+	}
+}
+
+.stars {
+	margin-bottom: 100px;
+}
+
+.slider {
+	width: 100%;
+	background-color: $d-gray;
+	height: 160px;
+
+	.sliderItem {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 25%;
+		height: 100%;
+	}
+
+	.flickity-prev-next-button {
+	  width: 45px;
+	  height: 45px;
+	  background: rgba(255,255,255, 0.5);
+	  border-radius: 0;
+	}
+	
+	.flickity-prev-next-button .arrow {
+	  fill: rgb(32,32,32);
+	}
+
+	.flickity-prev-next-button:hover {
+	  background: $bronze;
+	}
+
+	.flickity-prev-next-button.next {
+	    right: -22px;
+	}
+
+	.flickity-prev-next-button.previous {
+    	left: -22px;
+	}
+}
+
+// Get In Touch
+
+#inTouch {
+	padding-bottom: 0;
+}
+
+	.formFields {
+		display: flex;
+
+		div {
+			width: 50%;
+			margin-right: 30px;
+		}
+
+		textarea {
+			width: 50%;
+			margin-bottom: 30px;
+			padding: 20px;
+			border: 1px solid $gray;
+
+			&:focus {
+				border: 1px solid $bronze;
+				outline: 4px solid $bronze;
+			}
+		}
+
+		input {
+			width: 100%;
+			display: block;
+			padding: 20px 0 20px 20px;
+			margin-bottom: 30px;
+			border: 1px solid $gray;
+
+			&:focus {
+				border: 1px solid $bronze;
+				outline: 4px solid $bronze;
+			}
+		}
+
+	}
+
+
+.inTouch input[type='submit'] {
+	display: block;
+	margin: 30px auto 100px;
+	background-color: white;
+
+	&:hover {
+		background-color: $bronze;
+	}
+}
+
+.contact {
+	padding-bottom: 0;
+}
+
+.map {
+	height: 500px;
+	background-image: url(../assets/mapIcon.png);
+	background-position: center;
+	}

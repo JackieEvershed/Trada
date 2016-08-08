@@ -1,0 +1,94 @@
+
+header {
+	background-image: url("../images/hero.jpg");
+	height: 100vh;
+	position: relative;
+	color: white;
+}
+
+
+nav {
+	display: flex;
+	width: 100%;
+
+	ul {
+		display: flex;
+		padding-top: 40px;
+		padding-left: 0;
+		
+		li {
+
+			list-style-type: none;
+			text-transform: uppercase;
+			padding: 0px 25px;
+		}
+	}
+
+	& .socialNav {
+		display: flex;
+		flex-direction: row;
+		position: absolute;
+		top: 25px;
+		right: 25px;
+	
+		div {
+		 	margin: 15px;
+		}
+
+	}
+
+}
+
+nav a {
+
+	padding: 8px;
+	border: 2px solid rgba(0,0,0, 0);
+	display: inline-block;
+
+	&:hover {
+		color: $bronze;
+		border: 2px solid $bronze;
+	}
+
+}
+
+nav .logo {
+	width: 110px;
+	position: absolute;
+	top: 10px;
+	left: 25px;
+}
+
+h1 {
+	width: 110px;
+	padding: 10px;
+	border: 4px solid $bronze;
+	font-size: 20px;
+	text-align: center;
+}
+
+.hero {
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 150px;
+
+		p {
+			font-size: 17px;
+			letter-spacing: 5px;
+		}
+
+		h2 {
+			font-size: 80px;
+			letter-spacing: 5px;
+			margin: 0;
+
+			span {
+					color:$bronze;
+			}
+		}
+}
+
+.burger {
+	display: none;
+}
+

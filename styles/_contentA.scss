@@ -1,0 +1,468 @@
+
+// Who We Are
+
+.who {
+	background-color: $l-gray;
+}
+
+.photoBox {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-top: 130px;
+}
+
+
+.photoBox img {
+	width: 48%;
+}
+
+.photoBoxInfo {
+	position: absolute;
+	z-index: 10;
+	width: 60%;
+	background: white;
+	padding: 60px;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+
+		h3 {
+			margin-top: 0;
+			font-weight: normal;
+
+			span {
+				font-weight: bold;
+			}
+		}
+}
+
+.who .photoBoxInfo { 
+
+	h3, h3 + p {
+		text-align: left;
+	}
+
+	h3:after {
+		display: block;
+		content: url(../assets/TradaDoubleLines.png);
+	}
+}
+
+
+.meterTitle {
+	display: flex;
+	justify-content: space-between;
+}
+
+.meter {
+	height: 4px;
+	background: $l-gray;
+
+		span {
+			height: 100%;
+			background: $bronze;
+			display: block;
+			width: 50%;
+			position: relative;
+			z-index: 2;
+			color: $bronze;
+			margin-left: 4px;
+		}
+
+}
+
+.meter span:before {
+	content:"";
+	display: inline-block;
+	position: absolute;
+    left: -4px;
+    height: 13px;
+    bottom: -4px;
+    width: 4px;
+	background-color: $bronze;
+}
+
+
+.meter span:after {
+	content: "\f04b";
+	display: inline-block;
+	font-family: FontAwesome;
+	font-size: 17px;
+    position: absolute;
+    right: -5px;
+    top: -6px;
+}
+
+
+.meter2 span {
+	width: 75%;
+}
+
+.meter3 span {
+	width: 40%;
+}
+
+.meter4 span {
+	width: 90%;
+}
+
+// The Team
+
+.teammates {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: center;
+	width: 100%;
+	margin-top: 80px 0;
+
+		img {
+			padding: 5px;
+			border: 1px solid $gray;
+		}
+}
+
+
+.team .wrapper {
+	@extend .column;
+}
+
+//Teammate Hover Effect
+
+.teammates__box--item {
+	position: relative;
+	display: inline-block;
+}
+
+.overlay {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0px 0 255px 255px;
+	border-color: transparent transparent rgba(0, 0, 0, 0.5) transparent;
+	position: absolute;
+	top: 5px;
+	right: 6px;
+	bottom: 4px;
+	opacity: 0;
+	transition: all .8s;
+}
+
+.overlay div {
+	width: 51px;
+	height: 51px;
+	background: white;
+	padding: 15px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: all .8s;
+	
+	& a {
+		font-size: 18px;
+		color: $black;
+
+		&:hover {
+			color: $bronze;
+		}
+	}
+
+}
+
+.teammates__box h5:after {
+	content:"";
+	display: block;
+	margin: 30px auto 0;
+	width: 20%;
+	border-bottom: 1px solid $gray;
+	transition: all 0.3s;
+}
+
+.teammates__box:hover {
+
+	h5:after {
+	width: 100%;
+	border-color: $bronze;
+	}
+
+	& .teammates__box--item .overlay {
+		
+		opacity: 1;
+
+		& div:first-child {
+			transform: translate(-51px, 51px);
+		}
+
+		& div:nth-child(2) {
+			transform: translate(-102px, 102px);
+		}
+
+		& div:last-child {
+			transform: translate(-153px, 153px);
+		}
+	}
+
+}
+// Services
+
+.services {
+	background-color: $black;
+	display: flex;
+	padding: 0;
+	text-align: right;
+
+		h3 {
+			margin-right: 10px;
+			text-align: right;
+			color: white;
+		}
+
+		.wrapper {
+			display: flex;
+			flex-direction: column;
+			padding: 60px 70px 60px 0;
+			width: 50%;
+		}
+
+}
+
+.skull {
+	width: 50%;
+	background-image: url(../images/services.jpg);
+	background-size: cover;
+    background-position: center center;
+}
+
+.serviceItem {
+	
+	display: flex;
+	align-items: center;
+	position: relative;
+	right: -120px;
+
+		h4 {
+			color: $bronze;
+		}
+
+		p {
+			color:$l-gray;
+		}
+}
+
+.serviceIcon {
+	@extend .icon;
+	position: static;
+	width: 100px;
+	height: 100px;
+	margin-left: 30px;
+}
+
+.serviceIcon div {
+	background-color: white;
+	width: 90px;
+	height: 90px;
+
+		img {
+			padding: 13px 10px;
+			width: 65%;
+		}
+}
+
+// Our Works
+
+.works {
+	@extend .column;
+
+	.intro {
+		margin-bottom: 0;
+	}
+}
+
+.works ul {
+	display: flex;
+	margin-bottom: 60px;
+
+		li {
+			padding: 10px 35px;
+			background-color: $black;
+			color: white;
+			border-left: 2px solid white;
+			border-right: 2px solid white;
+			text-transform: uppercase;
+
+			&:first-child {
+				border-radius: 20px 0px 0px 20px;
+			}
+
+			&:last-child {
+				border-radius: 0px 20px 20px 0px;
+			}
+			
+			&:hover {
+				background-color: $bronze;
+			}
+
+		} 
+
+}
+
+.gallery {
+	display: flex;
+
+	.galleryItem {
+
+		@extend .column;
+
+		border: 1px solid $gray;
+		margin: 0px 3px;
+		text-align: center;
+
+		img {
+				width: 100%;
+		}
+
+		h5 {
+			margin-top: 0;
+		}
+
+		&:hover .imgZoom{
+			opacity: 1;
+		}
+
+	}
+
+}
+
+//Gallery Img Hover Effect
+
+.galleryItem__img {
+	position: relative;
+}
+
+.galleryItem__img .imgZoom {
+	position: absolute;
+	top: 100px;
+	left: calc(50% - 60px);
+	display: flex;
+	opacity: 0;
+	transition: opacity .7s;
+
+		div {
+			width: 50px;
+			height: 50px;
+			background: white;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 5px;
+
+			img {
+				width: 50%;
+			}
+		}
+}
+
+//Facts
+
+.funFacts {
+	background-image: url(../images/funfacts.jpg);
+	color: white;
+	background-size: cover;
+	background-position: cneter center;
+
+	.intro {
+		margin-bottom: 0;
+	}
+
+		h3 {
+			margin-top: 0;
+			margin-bottom: 80px;
+		}
+}
+
+
+.facts {
+	display: flex;
+	justify-content: space-between;	
+}
+
+.factsItem {
+	@extend .column;
+	border: 3px solid white;
+	margin-right: 10px;
+	padding: 60px 30px;
+	width: calc(25% - 10px);
+	text-align: center;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	h3 {
+		font-size: 50px;
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+
+		div {
+			background: white;
+			padding: 15px;
+			height: 60px;
+			width: 60px;
+
+				img {
+					height: 90%;
+				}
+		}	
+}
+
+.theProcess {
+	background-color:$l-gray;
+}
+
+.process {
+
+	text-align: center;
+
+	.photoBoxInfo {
+		@extend .column;
+
+		h4:after {
+			content:"";
+			display: block;
+			width: 45px;
+			border-bottom: 3px solid $gray;
+			margin: 20px auto 0;
+		}
+
+		.icon {
+			position: static;
+
+			div {
+				background-color: $black;
+			}
+		}
+}
+
+	.numberLinks {
+		display: flex;
+		margin: 20px 0;
+
+			a {
+				color:$gray;
+				font-family: 'Droid-serif', serif;
+				font-size: 28px;
+				padding: 10px;
+				border-bottom: 4px solid white;
+				transition: all .5s;
+			
+				&:hover {
+					color:$bronze;
+					border-bottom: 4px solid $bronze;
+				}
+
+			}
+	}
+}
